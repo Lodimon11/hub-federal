@@ -62,7 +62,7 @@ export default function Contact() {
             <Mail className="w-4 h-4" />
             Contacto
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             ¿Tenés alguna{" "}
             <span className="text-primary">consulta?</span>
           </h2>
@@ -81,7 +81,7 @@ export default function Contact() {
                   <div className="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-success" />
                   </div>
-                  <h4 className="font-display text-xl font-semibold text-dark mb-2">
+                  <h4 className="font-display text-xl font-semibold text-foreground mb-2">
                     ¡Mensaje enviado!
                   </h4>
                   <p className="text-gray-text">
@@ -116,7 +116,7 @@ export default function Contact() {
                   <div className="flex flex-col gap-1.5">
                     <label
                       htmlFor="message"
-                      className="text-sm font-medium text-dark/80"
+                      className="text-sm font-medium text-foreground/80"
                     >
                       Mensaje
                     </label>
@@ -124,7 +124,7 @@ export default function Contact() {
                       id="message"
                       rows={4}
                       placeholder="Contanos en qué podemos ayudarte..."
-                      className={`w-full px-4 py-3 rounded-xl border bg-white text-dark placeholder:text-gray-text/60 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-none ${
+                      className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-gray-text/60 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-none ${
                         errors.message
                           ? "border-error focus:ring-error/30 focus:border-error"
                           : "border-gray-border hover:border-primary/40"
@@ -232,7 +232,7 @@ function ContactInfoItem({
         {icon}
       </div>
       <div>
-        <div className="text-sm font-semibold text-dark">{title}</div>
+        <div className="text-sm font-semibold text-foreground">{title}</div>
         <div className="text-sm text-gray-text">{detail}</div>
       </div>
     </div>

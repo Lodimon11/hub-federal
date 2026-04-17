@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Package, Search } from "lucide-react";
 import Button from "@/components/ui/Button";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const NAV_LINKS = [
   { label: "Clientes", href: "#clientes" },
@@ -45,8 +46,8 @@ export default function Navbar() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg shadow-dark/5"
-            : "bg-white"
+            ? "bg-background/95 backdrop-blur-md shadow-lg shadow-foreground/5"
+            : "bg-background"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +58,7 @@ export default function Navbar() {
                 <Package className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-xl font-bold text-dark leading-tight">
+                <span className="font-display text-xl font-bold text-foreground leading-tight">
                   Hub <span className="text-primary">Federal</span>
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-gray-text font-medium leading-tight">
@@ -72,7 +73,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-dark/70 hover:text-primary transition-colors duration-200 relative group"
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full" />
@@ -82,6 +83,7 @@ export default function Navbar() {
 
             {/* Desktop CTAs */}
             <div className="hidden lg:flex items-center gap-3">
+              <ThemeToggle />
               <Button variant="ghost" size="sm" icon={<Search className="w-4 h-4" />}>
                 Rastrear envío
               </Button>
@@ -97,9 +99,9 @@ export default function Navbar() {
               aria-label="Toggle menu"
             >
               {isOpen ? (
-                <X className="w-6 h-6 text-dark" />
+                <X className="w-6 h-6 text-foreground" />
               ) : (
-                <Menu className="w-6 h-6 text-dark" />
+                <Menu className="w-6 h-6 text-foreground" />
               )}
             </button>
           </div>
@@ -111,18 +113,21 @@ export default function Navbar() {
             isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="px-4 pb-6 pt-2 space-y-1 bg-white border-t border-gray-border/30">
+          <div className="px-4 pb-6 pt-2 space-y-1 bg-background border-t border-gray-border/30">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-3 px-4 rounded-xl text-dark/80 hover:bg-primary-50 hover:text-primary font-medium transition-colors"
+                className="block py-3 px-4 rounded-xl text-foreground/80 hover:bg-primary-50 hover:text-primary font-medium transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </a>
             ))}
             <div className="pt-4 flex flex-col gap-3">
+              <div className="flex justify-end mb-2">
+                <ThemeToggle />
+              </div>
               <Button variant="ghost" size="md" icon={<Search className="w-4 h-4" />} fullWidth>
                 Rastrear envío
               </Button>

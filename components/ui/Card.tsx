@@ -10,8 +10,8 @@ interface CardProps {
 }
 
 const variantStyles: Record<CardVariant, string> = {
-  default: "bg-white border border-gray-border/50",
-  elevated: "bg-white shadow-xl shadow-dark/5 border border-gray-border/30",
+  default: "bg-background border border-gray-border/50",
+  elevated: "bg-background shadow-xl shadow-foreground/5 border border-gray-border/30",
   glass: "glass-white",
 };
 

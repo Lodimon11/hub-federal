@@ -82,7 +82,7 @@ export default function Hero() {
               <div className="px-6 pt-6 pb-4">
                 <div className="flex items-center gap-2 mb-4">
                   <Search className="w-5 h-5 text-primary" />
-                  <h3 className="font-display text-lg font-semibold text-dark">
+                  <h3 className="font-display text-lg font-semibold text-foreground">
                     Rastreá tu envío
                   </h3>
                 </div>
@@ -97,7 +97,7 @@ export default function Hero() {
                     className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all duration-200 cursor-pointer ${
                       trackingTab === "tracking"
                         ? "bg-primary text-white shadow-md"
-                        : "text-gray-text hover:text-dark"
+                        : "text-gray-text hover:text-foreground"
                     }`}
                   >
                     Nº de Tracking
@@ -107,7 +107,7 @@ export default function Hero() {
                     className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all duration-200 cursor-pointer ${
                       trackingTab === "order"
                         ? "bg-primary text-white shadow-md"
-                        : "text-gray-text hover:text-dark"
+                        : "text-gray-text hover:text-foreground"
                     }`}
                   >
                     Nº de Orden
@@ -126,7 +126,7 @@ export default function Hero() {
                       ? "Ej: HF-1098-89254"
                       : "Ej: ORD-2024-00123"
                   }
-                  className="w-full px-4 py-3.5 rounded-xl border border-gray-border bg-white text-dark placeholder:text-gray-text/50 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-border bg-background text-foreground placeholder:text-gray-text/50 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                 />
                 <button
                   className="w-full py-3.5 rounded-xl bg-dark text-white font-semibold hover:bg-dark-light transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]"

@@ -20,7 +20,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
       <div className="flex flex-col gap-1.5">
         <label
           htmlFor={selectId}
-          className="text-sm font-medium text-dark/80"
+          className="text-sm font-medium text-foreground/80"
         >
           {label}
         </label>
@@ -28,7 +28,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           ref={ref}
           id={selectId}
           className={`
-            w-full px-4 py-3 rounded-xl border bg-white text-dark
+            w-full px-4 py-3 rounded-xl border bg-background text-foreground
             appearance-none cursor-pointer
             transition-all duration-200
             focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary

@@ -22,7 +22,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   ghost:
     "text-primary hover:bg-primary-50",
   white:
-    "bg-white text-primary hover:bg-primary-50 shadow-lg",
+    "bg-background text-primary hover:bg-primary-50 shadow-lg",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

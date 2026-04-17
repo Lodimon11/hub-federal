@@ -45,7 +45,7 @@ export default function Quoter() {
   };
 
   return (
-    <section id="cotizador" className="py-20 sm:py-28 bg-white">
+    <section id="cotizador" className="py-20 sm:py-28 bg-background">
       <div
         ref={ref}
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
@@ -58,7 +58,7 @@ export default function Quoter() {
             <Calculator className="w-4 h-4" />
             Cotizador Online
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Cotizá tu envío en{" "}
             <span className="text-primary">segundos</span>
           </h2>
@@ -155,7 +155,7 @@ export default function Quoter() {
 
                 {/* Breakdown */}
                 <Card variant="default" padding="md">
-                  <h4 className="font-semibold text-dark mb-3 flex items-center gap-2">
+                  <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
                     <Package className="w-4 h-4 text-primary" />
                     Desglose
                   </h4>
@@ -166,7 +166,7 @@ export default function Quoter() {
                         className="flex items-center justify-between py-2 border-b border-gray-border/30 last:border-0"
                       >
                         <div>
-                          <div className="text-sm font-medium text-dark">
+                          <div className="text-sm font-medium text-foreground">
                             {item.label}
                           </div>
                           {item.detail && (
@@ -175,7 +175,7 @@ export default function Quoter() {
                             </div>
                           )}
                         </div>
-                        <div className="text-sm font-semibold text-dark">
+                        <div className="text-sm font-semibold text-foreground">
                           USD {item.value.toFixed(2)}
                         </div>
                       </div>
@@ -193,7 +193,7 @@ export default function Quoter() {
                   <div className="w-20 h-20 rounded-2xl bg-primary-50 flex items-center justify-center mx-auto mb-6">
                     <DollarSign className="w-10 h-10 text-primary" />
                   </div>
-                  <h4 className="font-display text-xl font-semibold text-dark mb-2">
+                  <h4 className="font-display text-xl font-semibold text-foreground mb-2">
                     Tu presupuesto
                   </h4>
                   <p className="text-gray-text text-sm max-w-xs mx-auto">

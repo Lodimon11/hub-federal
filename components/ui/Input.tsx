@@ -14,7 +14,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <div className="flex flex-col gap-1.5">
         <label
           htmlFor={inputId}
-          className="text-sm font-medium text-dark/80"
+          className="text-sm font-medium text-foreground/80"
         >
           {label}
         </label>
@@ -22,7 +22,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={inputId}
           className={`
-            w-full px-4 py-3 rounded-xl border bg-white text-dark
+            w-full px-4 py-3 rounded-xl border bg-background text-foreground
             placeholder:text-gray-text/60
             transition-all duration-200
             focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary

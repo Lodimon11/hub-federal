@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ── Tailwind v4 Theme Tokens ────────────────────────────────────── */
 @theme inline {
   --color-primary: #0052CC;
@@ -9,12 +11,16 @@
   --color-primary-100: #CCE0FF;
   --color-accent: #00C853;
   --color-accent-dark: #00A844;
-  --color-surface: #F7F9FC;
-  --color-surface-alt: #EDF1F7;
+  
+  --color-surface: var(--bg-surface);
+  --color-surface-alt: var(--bg-surface-alt);
+  
   --color-dark: #0A1628;
   --color-dark-light: #1A2B45;
-  --color-gray-text: #5E6C84;
-  --color-gray-border: #DFE1E6;
+  
+  --color-gray-text: var(--text-gray);
+  --color-gray-border: var(--border-gray);
+  
   --color-white: #FFFFFF;
   --color-error: #DE350B;
   --color-success: #00875A;
@@ -23,8 +29,26 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 
-  --color-background: var(--color-white);
-  --color-foreground: var(--color-dark);
+  --color-background: var(--bg-main);
+  --color-foreground: var(--text-main);
+}
+
+:root {
+  --bg-main: #FFFFFF;
+  --text-main: #0A1628;
+  --bg-surface: #F7F9FC;
+  --bg-surface-alt: #EDF1F7;
+  --border-gray: #DFE1E6;
+  --text-gray: #5E6C84;
+}
+
+:root.dark {
+  --bg-main: #0A1628;
+  --text-main: #FFFFFF;
+  --bg-surface: #1A2B45;
+  --bg-surface-alt: #233554;
+  --border-gray: #2A3F5F;
+  --text-gray: #8E9BB0;
 }
 
 /* ── Base Styles ─────────────────────────────────────────────────── */
